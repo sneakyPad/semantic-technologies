@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> 
+
+<xs:simpleType name="simple">
+    <xs:restriction base="xs:double">
+        <!--<xs:pattern value="[1.0, 1.3, 1.7, 2.0, 2.3, 2.7, 3.0, 3.3, 3.7, 4.0, 4.7, 5.0]"></xs:pattern> -->
+        <xs:maxInclusive value="5.0"/>
+        <!-- <xs:pattern value="([1-5].0)|([1-4].3)|([1-4].7)"/> -->
+    </xs:restriction>
+</xs:simpleType>
+    
+
+<xs:simpleType name="complex">
+    <xs:restriction base="xs:double">
+        <xs:minInclusive value="1.0"/>
+        <xs:maxInclusive value="5.0"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+ <xs:group name="simpleCourseGroup">
+    <xs:sequence>
+        <xs:element name = "course"  minOccurs="1" maxOccurs="5">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name = "grade" maxOccurs="unbounded">
+                        
+                        <xs:complexType>
+                                   <xs:attribute name="attempt" type="xs:int"/>
+                                   <xs:attribute name="term" type="xs:string"/>
+                                   <xs:attribute name="type" type="simple"/> 
+                            
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+                <xs:attribute name="cid" type="xs:ID"/>
+            </xs:complexType>
+        </xs:element>
+    </xs:sequence>
+</xs:group>
+
+
+
+<xs:element name="university">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name = "students">
+                        <xs:complexType>
+                            <xs:sequence>
+                                 <xs:element name = "student">
+                                     <xs:complexType>
+                                         <xs:sequence>
+                                             <xs:element name="name" type="xs:string"/>
+                                             <xs:element name="firstname" type="xs:string"/>
+                                             <xs:element name = "courses">
+                                                 <xs:complexType>
+                                                     <xs:choice>
+                                                     <xs:sequence>
+                                                         
+                                                         <!-- Simple Course -->
+                                                         <xs:group ref="simpleCourseGroup"/>
+                                                         <!--  
+                                                            <xs:element name = "course"  minOccurs="5" maxOccurs="10">
+                                                                <xs:complexType>
+                                                                    <xs:sequence>
+                                                                        <xs:element name = "grade">
+                                                                            <xs:complexType>
+                                                                                <xs:attribute name="attempt" type="xs:int"/>
+                                                                                <xs:attribute name="term" type="xs:string"/>
+                                                                                <xs:attribute name="type" type="simple"/> 
+                                                                            </xs:complexType>
+                                                                        </xs:element>
+                                                                    </xs:sequence>
+                                                                    <xs:attribute name="cid" type="xs:int"/>
+                                                                </xs:complexType>
+                                                            </xs:element>
+                                                         -->
+                                                         
+                                                     </xs:sequence>
+                                                     <!-- Complex Type (self defined) for course -->
+                                                     <xs:sequence>
+                                                         
+                                                         <xs:element name = "coursej"  minOccurs="5" maxOccurs="10">
+                                                             <xs:complexType>
+                                                                 <xs:sequence>
+                                                                     
+                                                                     <xs:element name = "grade">
+                                                                         <xs:complexType>
+                                                                             <xs:attribute name="attempt" type="xs:int"/>
+                                                                             <xs:attribute name="term" type="xs:string"/>
+                                                                             <xs:attribute name="type" type="complex"/> 
+                                                                         </xs:complexType>
+                                                                     </xs:element>
+                                                                     
+                                                                     <!-- Simple Course -->
+                                                                     <xs:group ref="simpleCourseGroup"/>
+                                                                     
+                                                                     <!--  <xs:element ref="course">
+                                                                     </xs:element>
+                                                                     -->
+                                                                     
+                                                                 </xs:sequence>
+                                                                 <xs:attribute name="cid" type="xs:ID"/>
+                                                             </xs:complexType>
+                                                         </xs:element>
+                                                     </xs:sequence>
+                                                     </xs:choice>
+                                                 </xs:complexType>
+                                             </xs:element>
+                                         </xs:sequence>
+                                         <xs:attribute name="sid" type="xs:ID"/>
+                                     </xs:complexType>
+                                 </xs:element>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+        
+</xs:schema>
