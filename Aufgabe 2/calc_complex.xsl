@@ -7,9 +7,33 @@
     <xsl:output method="html" />
     <xsl:template match="course[@cid = 'IM130']">
         <xsl:value-of select="count(./course)"/>
-        <xsl:apply-templates/>
+     
+        <xsl:choose>
+            <xsl:when test="./course/@cid = 'IM131' and ./course/@cid = 'IM132' and ./course/@cid = 'IM133'">
+                Grade: <xsl:value-of select="."/>
+                Average: <xsl:value-of select="avg(./course/grade/text())"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <out>FEHLER: Einer der Kurse wurde nicht bestanden</out>  
+            </xsl:otherwise>
+        </xsl:choose>
         
-              
+        
+        <xsl:apply-templates/>
+        <!-- 
+        <xsl:for-each select="./course">
+            <xsl:choose>
+                <xsl:when test="./grade/text() &lt; 4.0">
+                    <xsl:value-of select="."/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <out>FEHLER: Der Kurs wurde nicht bestanden</out>  
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:for-each>
+
+       
+        <!--  Problem: asserts werden nicht erkannt
     </xsl:template>
     <xsl:template match="course[@cid = 'IM131']">
         <xsl:assert test="./grade/. &lt;= 4.0">
@@ -18,7 +42,7 @@
     </xsl:template>
     <xsl:template match="course[@cid = 'IM132']">
         <xsl:assert test="./grade/. &lt;=  4.0">
-            <xsl:message>FEHLER: Der Kurs wurde nicht bestanden</xsl:message>  
+            <out>FEHLER: Der Kurs wurde nicht bestanden</out>  
         </xsl:assert>     
     </xsl:template>
     <xsl:template match="course[@cid = 'IM133']">
@@ -26,5 +50,5 @@
             <xsl:message>FEHLER: Der Kurs wurde nicht bestanden</xsl:message>  
         </xsl:assert>     
     </xsl:template>
-    
+      -->
 </xsl:stylesheet>
