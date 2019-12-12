@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <university>
     <students>
         <student sid="sckl9999">
@@ -7,20 +7,20 @@
             <courses>
                 <course cid="IM120">
                     <grade attempt="1" term="WS15" type="simple">4.7</grade>
-                    <grade attempt="2" term="SS16" type="simple">5.0</grade>
-                    <grade attempt="3" term="WS16" type="simple">1.3</grade>
+                        <grade attempt="2" term="SS16" type="simple">5.0</grade>
+                            <grade attempt="3" term="WS16" type="simple">1.3</grade>
                 </course>
                 <course cid="IM130">
                     <grade attempt="1" term="SS16" type="complex">2.1</grade>
-                    <course cid="IM131">
-                        <grade attempt="1" term="WS16" type="simple">2.0</grade>
-                    </course>
-                    <course cid="IM132">
-                        <grade attempt="1" term="SS16" type="simple">2.3</grade>
-                    </course>
-                    <course cid="IM133">
-                        <grade attempt="1" term="WS16" type="simple">2.0</grade>
-                    </course>
+                        <course cid="IM131">
+                            <grade attempt="1" term="WS16" type="simple">2.0</grade>
+                        </course>
+                        <course cid="IM132">
+                            <grade attempt="1" term="SS16" type="simple">2.3</grade>
+                        </course>
+                        <course cid="IM133">
+                            <grade attempt="1" term="WS16" type="simple">2.0</grade>
+                        </course>
                 </course>
                 <course cid="IM140">
                     <grade attempt="1" term="WS16" type="simple">3.7</grade>
