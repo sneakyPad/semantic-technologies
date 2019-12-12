@@ -9,7 +9,8 @@
         <xsl:value-of select="count(./course)"/>
      
         <xsl:choose>
-            <xsl:when test="./course/@cid = 'IM131' and ./course/@cid = 'IM132' and ./course/@cid = 'IM133'">
+            <xsl:when test="./course/@cid = 'IM131' and ./course/@cid = 'IM132' and ./course/@cid = 'IM133' and not(./course/grade/text() > 4.0)">
+                
                 Grade: <xsl:value-of select="."/>
                 Average: <xsl:value-of select="avg(./course/grade/text())"/>
             </xsl:when>
@@ -20,6 +21,8 @@
         
         
         <xsl:apply-templates/>
+    </xsl:template>
+</xsl:stylesheet>
         <!-- 
         <xsl:for-each select="./course">
             <xsl:choose>
@@ -31,9 +34,9 @@
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:for-each>
-
-       
-        <!--  Problem: asserts werden nicht erkannt
+-->
+        <!--
+        Problem: asserts werden nicht erkannt
     </xsl:template>
     <xsl:template match="course[@cid = 'IM131']">
         <xsl:assert test="./grade/. &lt;= 4.0">
@@ -51,4 +54,3 @@
         </xsl:assert>     
     </xsl:template>
       -->
-</xsl:stylesheet>
