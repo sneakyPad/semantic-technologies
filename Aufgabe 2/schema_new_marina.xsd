@@ -18,6 +18,8 @@
         <xs:enumeration value="4.7"></xs:enumeration>
         <!-- <xs:pattern value="([1-5].0)|([1-4].3)|([1-4].7)"/> -->
     </xs:restriction>
+    
+    
 </xs:simpleType>
     
  <xs:simpleType name="complex">
@@ -31,11 +33,10 @@
 <xs:element name = "course">
      <xs:complexType>
           <xs:sequence>
-               <xs:element name = "grade" maxOccurs="unbounded" type="gradeType"/>
-                 
-               
+               <xs:element name = "grade" maxOccurs="unbounded" type="gradeType"/>                
           </xs:sequence>
          <xs:attribute name="cid" type="xs:string"/>
+         <xs:assert test="count(./*)>=./grade/@attempt"/>
      </xs:complexType>
 </xs:element>
 
@@ -83,6 +84,7 @@
                                                                         <xs:element ref="course" minOccurs="0" maxOccurs="unbounded"/>
                                                                     </xs:sequence>
                                                                 <xs:attribute name="cid" type="xs:string"/>
+                                                                <xs:assert test="count(./*)>=./grade/@attempt"/>
                                                                 <!--<xs:assert test="(boolean(preceding-sibling::node() = grade)) and (child::grade/@type = complex or course)"/>-->
                                                             </xs:complexType>
                                                         </xs:element>
