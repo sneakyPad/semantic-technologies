@@ -16,14 +16,10 @@
         <xs:enumeration value="4.0"></xs:enumeration>
         <xs:enumeration value="4.3"></xs:enumeration>
         <xs:enumeration value="4.7"></xs:enumeration>
-        <!-- <xs:pattern value="([1-5].0)|([1-4].3)|([1-4].7)"/> -->
     </xs:restriction>
-    
-    
 </xs:simpleType>
     
  <xs:simpleType name="complex">
-     
      <xs:restriction base="xs:double">
          <xs:minInclusive value="1.0"/>
          <xs:maxInclusive value="5.0"/>
@@ -50,15 +46,15 @@
     </xs:simpleContent>
 </xs:complexType>
     
-    <xs:complexType name="gradeTypeC">
-        <xs:simpleContent>
-            <xs:extension base="complex">
-                <xs:attribute name="attempt" type="xs:int"/> 
-                <xs:attribute name="term" type="xs:string"/> 
-                <xs:attribute name="type" type="xs:string"/> 
-            </xs:extension>
-        </xs:simpleContent>
-    </xs:complexType>  
+<xs:complexType name="gradeTypeC">
+    <xs:simpleContent>
+        <xs:extension base="complex">
+            <xs:attribute name="attempt" type="xs:int"/> 
+            <xs:attribute name="term" type="xs:string"/> 
+            <xs:attribute name="type" type="xs:string"/> 
+        </xs:extension>
+    </xs:simpleContent>
+</xs:complexType>  
 
 <xs:element name="university">
             <xs:complexType>
@@ -85,7 +81,6 @@
                                                                     </xs:sequence>
                                                                 <xs:attribute name="cid" type="xs:string"/>
                                                                 <xs:assert test="count(./*)>=./grade/@attempt"/>
-                                                                <!--<xs:assert test="(boolean(preceding-sibling::node() = grade)) and (child::grade/@type = complex or course)"/>-->
                                                             </xs:complexType>
                                                         </xs:element>
                                                  </xs:sequence>
@@ -101,5 +96,4 @@
                 </xs:sequence>
             </xs:complexType>
         </xs:element>
-        
 </xs:schema>
