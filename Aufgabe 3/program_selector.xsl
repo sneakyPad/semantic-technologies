@@ -9,7 +9,7 @@
     
  <xsl:variable name="pTime" select="'20191126011500 +0100'" />
  <xsl:variable name="pTimeI" select="'20191126011500 +0100'" />
- <xsl:variable name="pChannel" select="KabelEinsClassic.de" />
+ <xsl:variable name="pChannel" select="'KabelEinsClassic.de'" />
     
  <xsl:function name="fn:convertDate">
      <xsl:param name="string1"/>
@@ -46,7 +46,7 @@
              <xsl:value-of select="./title"/>
          </xsl:when>
          <xsl:otherwise>
-             <out></out>
+            
         </xsl:otherwise>
      </xsl:choose>
      
