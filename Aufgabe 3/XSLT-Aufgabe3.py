@@ -12,8 +12,7 @@ def main(time, channel):
 
 
     transform = etree.XSLT(etree.parse(f_xsl))
-    time = "\""+ time + "\""
-    channel = "\""+ channel + "\""
+
     print('time: ', time)
     print('channel', channel)
     
