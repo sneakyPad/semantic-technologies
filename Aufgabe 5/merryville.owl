@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/xyz/ontologies/2020/0/merryville"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/xyz/ontologies/2020/0/merryville">
+    <Prefix name="" IRI="http://www.semanticweb.org/xyz/ontologies/2020/0/merryville"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AnimalLover"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bird"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Child"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#City"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dog"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Father"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InterestingPerson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Man"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MarriedCouple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mother"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Parent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Woman"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasDaughter"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSon"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#loves"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#married"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#owns"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#characteristic"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ashton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Belinda"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bob"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Carl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Celia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cutie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Eva"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Garfield"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Jim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mary"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Merryville"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mimi"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Polly"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thomas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tumble"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tweety"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#AnimalLover"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#owns"/>
+            <Class IRI="#Animal"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#InterestingPerson"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Person"/>
+            <ObjectMinCardinality cardinality="1">
+                <ObjectProperty IRI="#married"/>
+                <Class IRI="#InterestingPerson"/>
+            </ObjectMinCardinality>
+            <DataMinCardinality cardinality="1">
+                <DataProperty IRI="#characteristic"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataMinCardinality>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Parent"/>
+        <ObjectUnionOf>
+            <Class IRI="#Father"/>
+            <Class IRI="#Mother"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Bird"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cat"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dog"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Father"/>
+        <Class IRI="#Parent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Man"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mother"/>
+        <Class IRI="#Parent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Woman"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Bird"/>
+        <Class IRI="#Cat"/>
+        <Class IRI="#Dog"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Man"/>
+        <Class IRI="#Woman"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Alice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Alice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Ashton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Belinda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Belinda"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Bill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Bill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InterestingPerson"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Carl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MarriedCouple"/>
+        <NamedIndividual IRI="#Carl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Celia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Celia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dog"/>
+        <NamedIndividual IRI="#Cutie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#InterestingPerson"/>
+        <NamedIndividual IRI="#Eva"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MarriedCouple"/>
+        <NamedIndividual IRI="#Eva"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mother"/>
+        <NamedIndividual IRI="#Eva"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Eva"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Evan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Evan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cat"/>
+        <NamedIndividual IRI="#Garfield"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MarriedCouple"/>
+        <NamedIndividual IRI="#Jane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mother"/>
+        <NamedIndividual IRI="#Jane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Jane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Jim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MarriedCouple"/>
+        <NamedIndividual IRI="#Jim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MarriedCouple"/>
+        <NamedIndividual IRI="#Mary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Woman"/>
+        <NamedIndividual IRI="#Mary"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#City"/>
+        <NamedIndividual IRI="#Merryville"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cat"/>
+        <NamedIndividual IRI="#Mimi"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bird"/>
+        <NamedIndividual IRI="#Polly"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Child"/>
+        <NamedIndividual IRI="#Thomas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Thomas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Father"/>
+        <NamedIndividual IRI="#Tom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Man"/>
+        <NamedIndividual IRI="#Tom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MarriedCouple"/>
+        <NamedIndividual IRI="#Tom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dog"/>
+        <NamedIndividual IRI="#Tumble"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bird"/>
+        <NamedIndividual IRI="#Tweety"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#loves"/>
+        <NamedIndividual IRI="#Alice"/>
+        <NamedIndividual IRI="#Thomas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#loves"/>
+        <NamedIndividual IRI="#Ashton"/>
+        <NamedIndividual IRI="#Alice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#loves"/>
+        <NamedIndividual IRI="#Bill"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#Tumble"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#married"/>
+        <NamedIndividual IRI="#Carl"/>
+        <NamedIndividual IRI="#Eva"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSon"/>
+        <NamedIndividual IRI="#Eva"/>
+        <NamedIndividual IRI="#Bill"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSon"/>
+        <NamedIndividual IRI="#Eva"/>
+        <NamedIndividual IRI="#Evan"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Jane"/>
+        <NamedIndividual IRI="#Alice"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Jane"/>
+        <NamedIndividual IRI="#Celia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSon"/>
+        <NamedIndividual IRI="#Jane"/>
+        <NamedIndividual IRI="#Bob"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#married"/>
+        <NamedIndividual IRI="#Jim"/>
+        <NamedIndividual IRI="#Jane"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#Mary"/>
+        <NamedIndividual IRI="#Garfield"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#loves"/>
+        <NamedIndividual IRI="#Thomas"/>
+        <NamedIndividual IRI="#Belinda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#Thomas"/>
+        <NamedIndividual IRI="#Polly"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#owns"/>
+        <NamedIndividual IRI="#Thomas"/>
+        <NamedIndividual IRI="#Tweety"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <NamedIndividual IRI="#Tom"/>
+        <NamedIndividual IRI="#Belinda"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasSon"/>
+        <NamedIndividual IRI="#Tom"/>
+        <NamedIndividual IRI="#Thomas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#married"/>
+        <NamedIndividual IRI="#Tom"/>
+        <NamedIndividual IRI="#Mary"/>
+    </ObjectPropertyAssertion>
+    <NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#loves"/>
+        <NamedIndividual IRI="#Bob"/>
+        <NamedIndividual IRI="#Bob"/>
+    </NegativeObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Alice"/>
+        <Literal>Alice</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Ashton"/>
+        <Literal>Ashton</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Belinda"/>
+        <Literal>Belinda</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Bill"/>
+        <Literal>Bill</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Bob"/>
+        <Literal>Bob</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Carl"/>
+        <Literal>Carl</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Celia"/>
+        <Literal>Celia</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Cutie"/>
+        <Literal>Cutie</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Eva"/>
+        <Literal>Eva</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Evan"/>
+        <Literal>Evan</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Garfield"/>
+        <Literal>Garfield</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#characteristic"/>
+        <NamedIndividual IRI="#Jane"/>
+        <Literal>beautiful</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Jane"/>
+        <Literal>Jane</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Jim"/>
+        <Literal>Jim</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#characteristic"/>
+        <NamedIndividual IRI="#Mary"/>
+        <Literal>rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Mary"/>
+        <Literal>Mary</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Mimi"/>
+        <Literal>Mimi</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Polly"/>
+        <Literal>Polly</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Thomas"/>
+        <Literal>Thomas</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Tom"/>
+        <Literal>Tom</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Tumble"/>
+        <Literal>Tumble</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#name"/>
+        <NamedIndividual IRI="#Tweety"/>
+        <Literal>Tweety</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasDaughter"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#hasSon"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#married"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#loves"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#owns"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSon"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#loves"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#married"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#owns"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasDaughter"/>
+        <Class IRI="#Woman"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSon"/>
+        <Class IRI="#Man"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#loves"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#married"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#owns"/>
+        <Class IRI="#Animal"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#name"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#characteristic"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+            <Class IRI="#Person"/>
+        </ObjectSomeValuesFrom>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#characteristic"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
