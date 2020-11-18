@@ -12,7 +12,7 @@ jsonschema==3.2.0
 MarkupSafe==1.1.1
 mistune==0.8.4
 more-itertools==8.0.2
-notebook==6.0.2
+notebook==6.1.5
 pandocfilters==1.4.2
 parso==0.5.2
 pexpect==4.7.0
